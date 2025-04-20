@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-ceramic text-terracotta;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .egg {
+    @apply cursor-pointer transition-transform duration-300 hover:scale-110;
+  }
+  
+  .discount-modal {
+    @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50;
+  }
+  
+  .discount-content {
+    @apply bg-white p-8 rounded-lg shadow-lg max-w-md w-full;
+  }
+} 
